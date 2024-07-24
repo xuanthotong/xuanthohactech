@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đăng Ký</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="registration-container">
+        <h2>Đăng Ký</h2>
+        <form action="/register" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <div>Họ và tên:</div>
+                <input type="text" name="fullname" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <div>Giới tính:</div>
+                <label><input type="radio" name="gender" value="nam" required> Nam</label>
+                <label><input type="radio" name="gender" value="nu"> Nữ</label>
+            </div>
+            <div class="form-group">
+                <div>Hình ảnh:</div>
+                <input type="file" name="photo" class="form-control">
+            </div>
+            <div class="form-group">
+                <div>Quốc tịch:</div>
+                <select name="nationality" class="form-control" required>
+                    <option value="united_states">United States</option>
+                    <option value="vietnam">Vietnam</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <div>Sở thích:</div>
+                <label><input type="checkbox" name="hobbies" value="the_thao"> Thể thao</label>
+                <label><input type="checkbox" name="hobbies" value="du_lich"> Du lịch</label>
+                <label><input type="checkbox" name="hobbies" value="am_nhac"> Âm nhạc</label>
+                <label><input type="checkbox" name="hobbies" value="am_thuc"> Ẩm thực</label>
+            </div>
+            <div class="form-group">
+                <div>Ghi chú:</div>
+                <textarea name="notes" class="form-control" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Đăng ký" class="form-control btn">
+                <input type="reset" value="Nhập lại" class="form-control btn">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

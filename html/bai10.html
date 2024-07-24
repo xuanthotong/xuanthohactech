@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Li lich</title>
+    <link rel="stylesheet" href="styles5.css">
+</head>
+<body>
+    <div class="form-button">
+        <form action="login" method="Post"></form>
+        <div class="form-group">
+            <label>Ho va Ten</label>
+            <input type="text" id="name" class="form-control" tabindex="1">
+        </div>
+        <div class="form-group">
+            <label>Ngay Sinh</label>
+            <input type="date" id="Ngaysinh" class="form-control" tabindex="2">
+        </div>
+        <div class="form-group">
+        <label for="diem">Điểm:</label>
+        <input type="number" id="diem"  class="form-control" name="diem" min="0" max="10" step="0.25" tabindex="3">
+        </div>
+        <div class="form-group">
+            <label for="nghenghiep">Nghề nghiệp:</label>
+        <input list="nghenghieplist" id="nghenghiep" name="nghenghiep"  class="form-control" tabindex="4">
+        <datalist id="nghenghieplist">
+            <option value="Giáo viên">
+            <option value="Kỹ sư">
+            <option value="Bác sĩ">
+            <option value="Luật sư">
+            <option value="Nhân viên văn phòng">
+        </datalist>
+        </div>
+        <div class="form-group">
+            <fieldset>
+                <legend>Giới tính</legend>
+                <label for="nam">Nam</label>
+                <input type="radio" id="nam" name="gioitinh"  class="form-control" value="nam">
+                <label for="nu">Nữ</label>
+                <input type="radio" id="nu" name="gioitinh"  class="form-control" value="nu">
+                <label for="khac">Khác</label>
+                <input type="radio" id="khac" name="gioitinh"  class="form-control" value="khac">
+            </fieldset>
+        </div>
+        <div class="form-group">
+            <fieldset>
+                <legend>Sở thích</legend>
+                <label for="thethao">Thể thao</label>
+                <input type="checkbox" id="thethao" name="sothich"  class="form-control" value="thethao">
+                <label for="amnhac">Âm nhạc</label>
+                <input type="checkbox" id="amnhac" name="sothich"  class="form-control" value="amnhac">
+                <label for="docsach">Đọc sách</label>
+                <input type="checkbox" id="docsach" name="sothich"  class="form-control" value="docsach">
+                <label for="dulich">Du lịch</label>
+                <input type="checkbox" id="dulich" name="sothich"  class="form-control" value="dulich">
+            </fieldset>
+        </div>
+        <div class="form-group">
+            <label>Ghi Chu</label>
+            <textarea id="ghichu" name="ghichu"  class="form-control" tabindex="2"></textarea>
+        </div>
+        <div class="form-group">
+            <button type="button" id="NhapLai" tabindex="6">Dang Ky</button>
+        </div>
+        <div class="form-group">
+            <button type="button" id="NhapLai" tabindex="6">Nhap Lai</button>
+
+        </div>
+    </div>
+</body>
+</html>

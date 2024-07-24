@@ -1,0 +1,74 @@
+
+body, h2, div, input, label {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.test {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.test h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Kiểu cho các khối thông tin */
+.test1 {
+    margin-bottom: 15px;
+}
+
+/* Kiểu cho nhãn */
+.test1 div {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* Kiểu cho các ô nhập liệu */
+.test2 {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Kiểu cho các nút radio */
+.test1 input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Kiểu cho nút submit */
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Thay đổi màu sắc của nút khi di chuột qua */
+button[type="submit"]:hover {
+    background-color: #45a049;
+}
