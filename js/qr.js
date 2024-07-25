@@ -1,22 +1,16 @@
-const img = document.querySelector ('img');
-const ssid = document.querySelector('.ssid');
-const password=document.querySelector('.password');
-const button=document.querySelector('.button');
-function update () {
-    const wifi='WIFI:TWPA;S:${ssid.value};P:${password.value};;';
-    img.src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${wifi}';
-}
-ssid.addEventListener(
-    'keyup',
-    update,
-) ;
-password.addEventListener(
-    'keyup',
-    update,
-);
-button.addEventListener(
-    'click',
-    () => {
-        window.print();
-    },
-);
+document.addEventListener('DOMContentLoaded', function() {
+    const ssidInput = document.querySelector('.ssid');
+    const passwordInput = document.querySelector('.password');
+    const qrCodeImg = document.getElementById('qrCode');
+
+    function updateQRCode() {
+        const ssid = ssidInput.value;
+        const password = passwordInput.value;
+        const qrData = `WIFI:T:WPA;S:${ssid};P:${password};;`;
+        const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(qrData)}`;
+        qrCodeImg.src = qrCodeUrl;
+    }
+
+    ssidInput.addEventListener('input', updateQRCode);
+    passwordInput.addEventListener('input', updateQRCode);
+});
